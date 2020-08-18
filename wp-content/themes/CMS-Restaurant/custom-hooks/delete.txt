@@ -1,1 +1,0 @@
-// Pour tous les hooks de customisation, car il peut y en avoir beaucoup et on sera vite perdus dans le simple functions.php.

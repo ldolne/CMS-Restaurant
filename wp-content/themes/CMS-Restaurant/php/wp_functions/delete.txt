@@ -1,0 +1,1 @@
+// Pour fonctionnalités supplémentaires, à renvoyer à functions.php
