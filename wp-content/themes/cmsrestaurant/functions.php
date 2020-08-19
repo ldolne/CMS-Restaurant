@@ -6,7 +6,8 @@ add_theme_support('post-thumbnails');
 
 function register_my_menu()
 {
-    register_nav_menu('main-menu', __('Main Menu'));
+    register_nav_menu('desktop-menu', __('Menu Desktop'));
+    register_nav_menu('mobile-menu', __('Menu Mobile'));
 }
 
 add_action('init', 'register_my_menu');
