@@ -1,5 +1,16 @@
 <?php
 
+
+// Gestion des images mises en avant ajoutée à WordPress
+add_theme_support('post-thumbnails');
+
+function register_my_menu()
+{
+    register_nav_menu('main-menu', __('Main Menu'));
+}
+
+add_action('init', 'register_my_menu');
+
 /*
 // enlever Gutenberg
 

@@ -1,12 +1,58 @@
 /*
 Theme Name: CMS-Restaurant
-Description: Site for a sophisticated restaurant
-Author: Laëtitia Dolne
-Author URI: https://github.com/ldolne
+Description: WordPress Theme Project for a sophisticated restaurant
+Author: Team 5 - Laëtitia Dolne, Ruben Lomo Maestu, Said El Mohor
+Author URI: https://github.com/ldolne/CMS-Restaurant
 Version: 1.0
 */
 
+/* Import all stylesheets
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+...
+*/
+
+@import url(assets/css/normalize.css);
+
 body
 {
-    background-color: black;
+    font-family: 'arial', sans-serif;
+    color: #333;
+    margin: 0;
 }
+
+main
+{
+    width: 1000px;
+    margin: auto;
+}
+
+footer
+{
+    margin-top: 20px;
+    background-color: #eee;
+    padding: 20px;
+}
+
+div[class^="menu"]
+{
+    background-color: #eee;
+    padding: 20px;
+}
+
+ul, footer p
+{
+    padding: 0;
+    width: 1000px;
+    margin: auto;
+}
+
+ul .page_item
+{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
