@@ -14,6 +14,29 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
+/// Poppins Font
+/// @type List
+$main-font: 'Poppins', sans-serif;
+
+
+/// Font sizes
+$normal-text-size: 16px;
+$normal-text-weight: 300;
+
+$subtitles-size: 42px;
+$subtitles-weight: 400;
+
+$titles-size: 46px;
+$titles-weight: 700;
+
+$main-title-size: 100px;
+$main-title-weight: 600;
+
+$main-subtitle-size: 60px;
+$main-subtitle-weight: 400;
+
+$menu-size: 16px;
+$menu-weight: 500;
 
 
 
@@ -38,6 +61,13 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
+/// White
+/// @type Color
+$white: #FFF;
+
+/// Black
+/// @type Color
+$black: #292929;
 
 
 

@@ -31,3 +31,9 @@
     @content;
   }
 }
+
+/// Assign font styles
+@mixin apply-font-style($fontSize, $fontWeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}

@@ -335,7 +335,7 @@ a {
  */
 body {
   color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 125%/1.4 "Poppins", sans-serif; }
 
 /**
  * Clear inner floats
@@ -391,3 +391,22 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+.menu-main-menu-desktop-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.menu-main-menu-desktop-container .menu-item {
+  display: inline-block;
+  /* step 1 */
+  width: 20%;
+  /* step 4 */
+  margin-right: -4px;
+  /* step 5 */ }
+
+.menu-main-menu-desktop-container a {
+  display: block;
+  /* step 2 */
+  text-decoration: none;
+  /* step 3 */ }
