@@ -32,6 +32,13 @@ add_action('after_setup_theme', 'cmsrestaurant_supports');
 //add_action('wp_enqueue_scripts', 'cmsrestaurant_register_assets');
 add_action('init', 'register_my_menu');
 add_filter('wp_title', 'cmsrestaurant_title');
+add_action('init', function () {
+    if(function_exists('acf_add_options_page')) {
+        acf_add_options_page([
+            'page_title' => 'Restaurant options'
+        ]);
+    }
+});
 
 /*
 // enlever Gutenberg
