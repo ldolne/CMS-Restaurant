@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <main>
+    <main class="home">
         <section class="home-bannertop-header">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
@@ -22,10 +22,10 @@
                 <?php
                     $image = get_sub_field('home-bannertop-qualities-image');
                     if( !empty( $image ) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img class="home-bannertop-qualities__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     <?php endif; ?>
-                    <h2><?php the_sub_field('home-bannertop-qualities-title'); ?></h2>
-                    <p><?php the_sub_field('home-bannertop-qualities-text'); ?></p>
+                    <h2 class="home-bannertop-qualities__title"><?php the_sub_field('home-bannertop-qualities-title'); ?></h2>
+                    <p class="home-bannertop-qualities__text"><?php the_sub_field('home-bannertop-qualities-text'); ?></p>
                 <?php endwhile; ?>
             <?php else: ?>
             <p>No info.</p>
@@ -59,6 +59,7 @@
             $the_query = new WP_Query(array (
                 'post_type' => 'post',
                 'posts_per_page' => 3,
+                'order'   => 'ASC',
             ));
             ?>
 
