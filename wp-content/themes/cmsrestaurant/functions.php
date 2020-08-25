@@ -6,7 +6,7 @@ function cmsrestaurant_supports() {
     // Gestion des titres
     add_theme_support('title-tag');
     // Gestion des images mises en avant ajoutée à WordPress
-    add_theme_support('post-thumbnails');
+    //add_theme_support('post-thumbnails');
 }
 
 function cmsrestaurant_register_assets() {
