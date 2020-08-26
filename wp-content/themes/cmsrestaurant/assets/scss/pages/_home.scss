@@ -8,7 +8,6 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: stretch;
-  color: $white;
 }
 
 .home-bannertop-header {
@@ -26,24 +25,27 @@
     left: 10%;
   }
   &__subtitle {
+    color: $white;
     font-size: $main-subtitle-size / 2;
     font-weight: $main-subtitle-weight;
   }
   &__maintitle {
+    color: $white;
     max-width: 400px;
     font-size: $main-title-size / 2;
     font-weight: $main-title-weight;
+    padding-bottom: 5%;
   }
   &__internlink {
     color: $white;
     font-weight: $main-title-weight;
   }
   &__internlink::before {
-    content:'----  ';
+    content:'――   ';
   }
   &__hachure {
-    position: relative;
-    top: 1250px;
+    position: absolute;
+    top: 775px;
     left: 0;
     z-index: 10;
   }
@@ -51,18 +53,18 @@
 
 .home-bannertop-qualities {
   flex: 1 1 auto;
-  padding: 5% 0;
+  padding: 10% 0;
   background-color: $white;
   text-align: center;
 
   &__image {
     width: 30%;
-    height: auto;
   }
 
   &__title {
-    font-size: $titles-size;
+    font-size: $titles-size / 2;
     font-weight: $titles-weight;
+    padding: 3% 0 15% 0;
   }
 
   &__text {
@@ -72,14 +74,70 @@
 
 .home-intro {
   flex: 1 1 auto;
+  padding-bottom: 15%;
 
-  background-color: cornflowerblue;
+  &__blocktext {
+    padding: 15% 10%;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: $main-title-size / 2.5;
+    font-weight: $main-title-weight;
+    max-width: 80%;
+  }
+
+  &__subtitle {
+    font-size: $main-subtitle-size / 5;
+    font-weight: $main-subtitle-weight * 1.5;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: $normal-text-size / 1.5;
+    font-weight: $normal-text-weight;
+    line-height: 1.8rem;
+    padding: 5% 0;
+
+    p {
+      padding-bottom: 5%;
+    }
+  }
+
+  .signature__subtitle {
+    font-size: $subtitles-size / 4;
+    font-weight: $subtitles-weight * 1.5;
+    text-transform: uppercase;
+  }
+
+  .signature__title {
+    font-size: $titles-size / 1.75;
+    font-weight: $titles-weight / 1.75;
+  }
 }
 
 .home-restaurants {
   flex: 3 1 auto;
+  background-image: url('http://localhost:8000/wp-content/uploads/2020/08/burger-party.png');
+  background-position: center;
+  background-color: $grey;
+  background-repeat: repeat-y;
+  overflow: hidden;
 
-  background-color: lightgreen;
+  &__subtitle {
+
+  }
+
+  &__title {
+
+  }
 }
 
 .home-menu {

@@ -34,18 +34,20 @@
         <section class="home-intro">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
-                    <?php
-                    $image = get_field('home-intro_home-intro-image');
-                    if(!empty($image)): ?>
-                        <img class="home-intro__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-                    <h2 class="home-intro__title"><?php echo get_field('home-intro_home-intro-title'); ?></h2>
-                    <h3 class="home-intro__subtitle"><?php echo get_field('home-intro_home-intro-subtitle'); ?></h3>
-                    <p class="home-intro__text"><?php echo get_field('home-intro_home-intro-text'); ?></p>
-                    <div class="home-intro__signature signature">
-                        <p class="signature__subtitle"><?php echo get_field('home-intro_home-intro-signature_home-intro-signature-subtitle'); ?></p>
-                        <p class="signature__title"><?php echo get_field('home-intro_home-intro-signature_home-intro-signature-title'); ?></p>
-                    </div>
+                <?php
+                $image = get_field('home-intro_home-intro-image');
+                if(!empty($image)): ?>
+                    <img class="home-intro__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+                <div class="home-intro__blocktext">
+                        <h2 class="home-intro__title"><?php echo get_field('home-intro_home-intro-title'); ?></h2>
+                        <h3 class="home-intro__subtitle"><?php echo get_field('home-intro_home-intro-subtitle'); ?></h3>
+                        <p class="home-intro__text"><?php echo get_field('home-intro_home-intro-text'); ?></p>
+                        <div class="home-intro__signature signature">
+                            <p class="signature__subtitle"><?php echo get_field('home-intro_home-intro-signature_home-intro-signature-subtitle'); ?></p>
+                            <p class="signature__title"><?php echo get_field('home-intro_home-intro-signature_home-intro-signature-title'); ?></p>
+                        </div>
+                </div>
             <?php endwhile; ?>
         <?php else: ?>
             <p>No info.</p>
