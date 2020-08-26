@@ -574,23 +574,42 @@ header {
 
 .home-bannertop-header {
   flex: 1 1 auto;
-  height: 1200px; }
+  height: 800px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  .home-bannertop-header__blocktext {
+    position: absolute;
+    top: 10%;
+    left: 10%; }
   .home-bannertop-header__subtitle {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 400; }
   .home-bannertop-header__maintitle {
-    font-size: 100px;
+    max-width: 400px;
+    font-size: 50px;
     font-weight: 600; }
   .home-bannertop-header__internlink {
-    color: #FFF; }
+    color: #FFF;
+    font-weight: 600; }
   .home-bannertop-header__internlink::before {
-    content: '-------';
-    border: 1px #FFF dashed; }
+    content: '----  '; }
+  .home-bannertop-header__hachure {
+    position: relative;
+    top: 1250px;
+    left: 0;
+    z-index: 10; }
 
 .home-bannertop-qualities {
   flex: 1 1 auto;
-  background-color: lightgreen;
+  padding: 5% 0;
+  background-color: #FFF;
   text-align: center; }
+  .home-bannertop-qualities__image {
+    width: 30%;
+    height: auto; }
   .home-bannertop-qualities__title {
     font-size: 46px;
     font-weight: 700; }

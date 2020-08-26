@@ -61,3 +61,66 @@ add_filter('use_block_editor_for_post_type', '__return_false', 10);
   }
   add_action('admin_menu','my_wpadmin_sidebar_menu', 999);
   */
+
+// Removes unused roles
+
+function remove_unused_roles() {
+    remove_role( 'subscriber' );
+    remove_role( 'contributor' );
+    remove_role( 'author' );
+    remove_role('shop_manager');
+    remove_role('customer');
+}
+
+// Add custom type post managing options to new role "cook"
+/**
+ * Overwrite args of custom post type registered by plugin
+ */
+function change_capabilities_of_recipe( $args, $post_type ){
+
+    // Do not filter any other post type
+    if ( 'recipe' !== $post_type ) {
+        // Give other post_types their original arguments
+        return $args;
+    }
+
+    // Change the capabilities of the "recipe" post_type
+    $args['capabilities'] = array(
+        'edit_posts' => 'edit_recipes',
+        'edit_published_posts' => 'edit_published_recipes',
+        'publish_posts' => 'publish_recipes',
+        'read_private_posts' => 'read_private_recipes',
+        'delete_posts' => 'delete_recipes',
+        'delete_private_posts' => 'delete_private_recipes',
+        'delete_published_posts' => 'delete_published_recipes'
+    );
+
+    // Give the recipe post type it's arguments
+    return $args;
+}
+
+function add_caps($role) {
+    $role = get_role($role);
+    $role->add_cap( 'read_private_recipes' );
+    $role->add_cap( 'edit_recipes' );
+    $role->add_cap( 'edit_published_recipes' );
+    $role->add_cap( 'publish_recipes' );
+    $role->add_cap( 'delete_recipes' );
+    $role->add_cap( 'delete_private_recipes' );
+    $role->add_cap( 'delete_published_recipes' );
+}
+
+function rpt_add_role_caps() {
+    remove_role('cook');
+    add_role('cook', __('Cook'));
+    add_caps('cook');
+    add_caps('editor');
+    add_caps('administrator');
+}
+
+add_action( 'init', 'remove_unused_roles' );
+add_filter( 'register_post_type_args', 'change_capabilities_of_recipe' , 10, 2 );
+add_action('admin_init','rpt_add_role_caps',999);
+
+
+

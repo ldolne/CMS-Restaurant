@@ -3,16 +3,18 @@
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <section class="home-bannertop-header" style="background-image:url('<?php echo get_field('header-image'); ?>')">
+            <div class="home-bannertop-header__blocktext">
                 <h3 class="home-bannertop-header__subtitle"><?php echo get_field('header-subtitle'); ?></h3>
                 <h2 class="home-bannertop-header__maintitle"><?php echo get_field('header-maintitle'); ?></h2>
                 <?php $internLink = get_field('header-internlink'); ?>
                 <a href="<?php echo $internLink['url'] ?>" class="home-bannertop-header__internlink"><?php echo $internLink['title'] ?></a>
+            </div>
+            <img class="home-bannertop-header__hachure" src="http://localhost:8000/wp-content/uploads/2020/08/hachures-blanches-1-e1598446491726.png" alt="">
         </section>
             <?php endwhile; ?>
         <?php else: ?>
             <p>No info.</p>
         <?php endif; ?>
-
         <section class="home-bannertop-qualities">
             <?php if (have_rows('home-bannertop-qualities')): ?>
                 <?php while (have_rows('home-bannertop-qualities')): the_row(); ?>
@@ -35,7 +37,7 @@
                     <?php
                     $image = get_field('home-intro_home-intro-image');
                     if(!empty($image)): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <img class="home-intro__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                     <?php endif; ?>
                     <h2 class="home-intro__title"><?php echo get_field('home-intro_home-intro-title'); ?></h2>
                     <h3 class="home-intro__subtitle"><?php echo get_field('home-intro_home-intro-subtitle'); ?></h3>
