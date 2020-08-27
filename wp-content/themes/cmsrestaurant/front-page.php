@@ -77,17 +77,21 @@
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                     <?php if (have_rows('restaurants-bannerpresentation_restaurants-bannerpresentation-repeater')): ?>
                         <?php the_row(); ?>
+                        <div class="home-restaurants-repeater">
                             <?php
                             $image = get_sub_field('restaurants-bannerpresentation-repeater-image');
                             if( !empty( $image ) ): ?>
                                 <img class="home-restaurants-repeater__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             <?php endif; ?>
-                            <h5 class="home-restaurants-repeater__subtitle"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-subtitle'); ?></h5>
-                            <h4 class="home-restaurants-repeater__title"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-title'); ?></h4>
-                            <p class="home-restaurants-repeater__content"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-content'); ?></p>
-                            <a class="home-restaurants-repeater__link" href="<?php the_permalink(); ?>">
-                                <p>More infos</p>
-                            </a>
+                            <div class="home-restaurants-repeater__blocktext">
+                                <h5 class="home-restaurants-repeater__subtitle"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-subtitle'); ?></h5>
+                                <h4 class="home-restaurants-repeater__title"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-title'); ?></h4>
+                                <p class="home-restaurants-repeater__content"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-content'); ?></p>
+                                <a class="home-restaurants-repeater__link" href="<?php the_permalink(); ?>">
+                                    <p>More infos</p>
+                                </a>
+                            </div>
+                        </div>
                     <?php else: ?>
                         <p>No info.</p>
                     <?php endif; ?>
@@ -101,6 +105,8 @@
         <section class="home-menu">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
+                    <h3 class="home-menu__subtitle"><?php echo get_field('home-ourmenu_home-ourmenu-subtitle'); ?></h3>
+                    <h2 class="home-menu__title"><?php echo get_field('home-ourmenu_home-ourmenu-title'); ?></h2>
                     <?php
                     $images = get_field('home-ourmenu_home-ourmenu-gallery');
                     if( $images ): ?>
@@ -108,25 +114,24 @@
                             <?php foreach( $images as $image ): ?>
                                 <li>
                                     <a href="<?php echo esc_url($image['url']); ?>">
-                                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <img class="home-menu__image" src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                                     </a>
                                     <p><?php echo esc_html($image['caption']); ?></p>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                    <h3 class="home-menu__subtitle"><?php echo get_field('home-ourmenu_home-ourmenu-subtitle'); ?></h3>
-                    <h2 class="home-menu__title"><?php echo get_field('home-ourmenu_home-ourmenu-title'); ?></h2>
                     <p class="home-menu__text"><?php echo get_field('home-ourmenu_home-ourmenu-text'); ?></p>
                     <?php
                     $internLink = get_field('home-ourmenu_home-ourmenu-internlink'); ?>
-                    <a class="home--menu__link" href="<?php echo $internLink['url'] ?>">
+                    <a class="home-menu__link" href="<?php echo $internLink['url'] ?>">
                         <p><?php echo $internLink['title'] ?></p>
                     </a>
                 <?php endwhile; ?>
             <?php else: ?>
                 <p>No info.</p>
             <?php endif; ?>
+            <img class="home-menu__hachure" src="http://localhost:8000/wp-content/uploads/2020/08/hachures-blanches.png" alt="">
         </section>
 
         <section class="home-testimony">

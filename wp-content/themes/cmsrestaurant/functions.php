@@ -122,5 +122,16 @@ add_action( 'init', 'remove_unused_roles' );
 add_filter( 'register_post_type_args', 'change_capabilities_of_recipe' , 10, 2 );
 add_action('admin_init','rpt_add_role_caps',999);
 
+function switch_to_relative_url($html, $id, $caption, $title, $align, $url, $size, $alt)
+{
+    $imageurl = wp_get_attachment_image_src($id, $size);
+    $relativeurl = wp_make_link_relative($imageurl[0]);
+    $html = str_replace($imageurl[0],$relativeurl,$html);
+
+    return $html;
+}
+
+add_filter('image_send_to_editor','switch_to_relative_url',10,8);
+
 
 
