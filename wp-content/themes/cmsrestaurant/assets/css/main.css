@@ -406,10 +406,12 @@ body {
   position: absolute;
   width: 1px; }
 
-header {
+.header {
   padding: 20px;
   display: flex;
-  align-items: baseline; }
+  align-items: baseline;
+  font-size: 16px;
+  font-weight: 500; }
 
 /* Screen reader only */
 .sr-only {
@@ -789,7 +791,7 @@ footer {
     content: '――   '; }
   .home-bannertop-header__hachure {
     position: absolute;
-    top: 775px;
+    bottom: -50px;
     left: 0;
     z-index: 10; }
 
@@ -884,8 +886,12 @@ footer {
       font-size: 30.66667px;
       font-weight: 560;
       letter-spacing: 2px; }
-    .home-restaurants-repeater__content {
-      padding: 5%; }
+    .home-restaurants-repeater__text {
+      width: 60%;
+      margin: auto;
+      padding: 5%;
+      word-break: break-all;
+      overflow-wrap: break-word; }
     .home-restaurants-repeater__link {
       display: inline-block;
       margin: 10% 5% 5% 5%;
@@ -898,8 +904,9 @@ footer {
 
 .home-menu {
   flex: 4 1 auto;
+  position: relative;
   background-color: #FFF;
-  padding: 18% 0;
+  padding: 15% 0 5% 0;
   text-align: center; }
   .home-menu ul {
     list-style-type: none;
@@ -927,7 +934,9 @@ footer {
   .home-menu__text {
     font-size: 10.66667px;
     font-weight: 450;
-    line-height: 1.8rem; }
+    line-height: 1.8rem;
+    width: 60%;
+    margin: auto; }
   .home-menu__link {
     display: inline-block;
     margin: 12% 5% 10% 5%;
@@ -939,12 +948,52 @@ footer {
     color: #FFF; }
   .home-menu__hachure {
     position: absolute;
-    bottom: 200px;
+    bottom: -50px;
     left: 0; }
 
 .home-testimony {
-  flex: 4 1 auto;
-  background-color: lightgreen; }
+  flex: 1 1 auto;
+  margin-bottom: 0;
+  padding: 25% 0 0 0;
+  background-color: #292929;
+  color: #FFF;
+  text-align: center; }
+  .home-testimony__quotes {
+    max-width: 6%;
+    height: auto;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    padding: 5% 0; }
+  .home-testimony__text {
+    font-size: 17.6px;
+    font-weight: 750;
+    line-height: 2rem;
+    padding-bottom: 10%;
+    width: 75%;
+    margin: auto; }
+  .home-testimony__name {
+    font-size: 14.54545px;
+    font-weight: 300;
+    padding-bottom: 5%; }
+  .home-testimony__name:before {
+    content: '―   '; }
+  .home-testimony__dots {
+    max-width: 10%;
+    max-height: 3%;
+    padding: 0;
+    margin: 0; }
+  .home-testimony__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 5% auto 0 auto;
+    object-fit: cover; }
 
 .home-recipes {
-  flex: 1 1 auto; }
+  flex: 1 1 auto;
+  position: relative; }
+  .home-recipes__hachure {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 10; }

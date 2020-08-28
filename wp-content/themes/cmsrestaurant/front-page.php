@@ -86,7 +86,7 @@
                             <div class="home-restaurants-repeater__blocktext">
                                 <h5 class="home-restaurants-repeater__subtitle"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-subtitle'); ?></h5>
                                 <h4 class="home-restaurants-repeater__title"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-title'); ?></h4>
-                                <p class="home-restaurants-repeater__content"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-content'); ?></p>
+                                <p class="home-restaurants-repeater__text"><?php echo get_sub_field('restaurants-bannerpresentation-repeater-content'); ?></p>
                                 <a class="home-restaurants-repeater__link" href="<?php the_permalink(); ?>">
                                     <p>More infos</p>
                                 </a>
@@ -139,13 +139,15 @@
                 <?php while (have_posts()) : the_post(); ?>
                     <?php if (have_rows('home-testimony_home-testimony-repeater')): ?>
                         <?php while(have_rows('home-testimony_home-testimony-repeater')) : the_row(); ?>
-                        <?php
-                        $image = get_sub_field('home-testimony-repeater-image');
-                        if( !empty( $image ) ): ?>
-                            <img class="home-testimony__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-                        <p class="home-testimony__text"><?php echo get_sub_field('home-testimony-repeater-text'); ?></p>
-                        <p class="home-testimony__name"><?php echo get_sub_field('home-testimony-repeater-name'); ?></p>
+                            <img class="home-testimony__quotes" src="<?php bloginfo('template_url'); ?>/assets/img/images/guillemets.png" alt="">
+                            <p class="home-testimony__text"><?php echo get_sub_field('home-testimony-repeater-text'); ?></p>
+                            <p class="home-testimony__name"><?php echo get_sub_field('home-testimony-repeater-name'); ?></p>
+                            <img class="home-testimony__dots" src="<?php bloginfo('template_url'); ?>/assets/img/images/dots.png" alt="">
+                            <?php
+                            $image = get_sub_field('home-testimony-repeater-image');
+                            if( !empty( $image ) ): ?>
+                                <img class="home-testimony__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <?php endif; ?>
                         <?php endwhile; ?>
                     <?php else: ?>
                         <p>No info.</p>
@@ -157,6 +159,7 @@
         </section>
 
         <section class="home-recipes">
+            <img class="home-recipes__hachure" src="http://localhost:8000/wp-content/uploads/2020/08/hachures-blanches-1-e1598446491726.png" alt="">
             <!-- Bloc de Ruben -->
         </section>
     </main>

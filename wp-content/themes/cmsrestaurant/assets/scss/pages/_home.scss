@@ -45,7 +45,7 @@
   }
   &__hachure {
     position: absolute;
-    top: 775px;
+    bottom: -50px;
     left: 0;
     z-index: 10;
   }
@@ -180,8 +180,12 @@
       letter-spacing: 2px;
     }
 
-    &__content {
+    &__text {
+      width: 60%;
+      margin: auto;
       padding: 5%;
+      word-break: break-all;
+      overflow-wrap: break-word;
     }
 
     &__link {
@@ -199,8 +203,9 @@
 
 .home-menu {
   flex: 4 1 auto;
+  position: relative;
   background-color: $white;
-  padding: 18% 0;
+  padding: 15% 0 5% 0;
   text-align: center;
 
   ul {
@@ -240,6 +245,8 @@
     font-size: $normal-text-size / 1.5;
     font-weight: $normal-text-weight * 1.5;
     line-height: 1.8rem;
+    width: 60%;
+    margin: auto;
   }
 
   &__link {
@@ -255,17 +262,76 @@
 
   &__hachure {
     position: absolute;
-    bottom: 200px;
+    bottom: -50px;
     left: 0;
   }
 }
 
 .home-testimony {
-  flex: 4 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 0;
+  padding: 25% 0 0 0;
+  background-color: $black;
+  color: $white;
+  text-align: center;
 
-  background-color: lightgreen;
+  &__quotes {
+    max-width: 6%;
+    height: auto;
+    filter: invert(100%);
+    -webkit-filter:invert(100%);
+    padding: 5% 0;
+  }
+
+  &__text {
+    font-size: $normal-text-size * 1.10;
+    font-weight: $normal-text-weight * 2.5;
+    line-height: 2rem;
+    padding-bottom: 10%;
+    width: 75%;
+    margin: auto;
+  }
+
+  &__name  {
+    font-size: $normal-text-size / 1.10;
+    font-weight: $normal-text-weight;
+    padding-bottom: 5%;
+  }
+
+  &__name:before  {
+    content:'―   ';
+  }
+
+  &__dots {
+    max-width: 10%;
+    max-height: 3%;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 5% auto 0 auto;
+    object-fit: cover;
+  }
 }
 
 .home-recipes {
   flex: 1 1 auto;
+  position: relative;
+
+  &__hachure {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+// MEDIA QUERIES
+// DESKTOP
+@media screen and (min-width: 1030px) {
+
 }

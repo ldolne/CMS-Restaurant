@@ -95,22 +95,22 @@
         <div class="footer-insta">
             <h3>Instagram</h3>
             <div class="footer-imgbox">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/plat1.jpg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/images/resto1.jpg" alt="">
             </div>
             <div class="footer-imgbox">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/plat2.jpg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/images/resto2.jpg" alt="">
             </div>
             <div class="footer-imgbox">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/plat3.jpg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/images/resto3.jpg" alt="">
             </div>
             <div class="footer-imgbox">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/plat4.jpg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/images/resto1.jpg" alt="">
             </div>
             <div class="footer-imgbox">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/plat5.jpg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/images/resto2.jpg" alt="">
             </div>
             <div class="footer-imgbox">
-                <img src="<?php bloginfo('template_url'); ?>/assets/img/plat6.jpg" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/assets/img/images/resto3.jpg" alt="">
             </div>
         </div>
         <div class="footer-copyright">
