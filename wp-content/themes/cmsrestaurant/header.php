@@ -11,7 +11,7 @@
     <?php wp_head() ?>
 </head>
 <body>
-<header>
+<header class="header">
     <a href="#main-menu"
        id="main-menu-toggle"
        class="menu-toggle"
@@ -20,7 +20,7 @@
         <span class="fa fa-bars" aria-hidden="true"></span>
     </a>
 
-    <h1 class="logo"><? bloginfo("name"); ?></h1>
+    <h1 class="header__logo"><? bloginfo("name"); ?></h1>
 
     <nav id="main-menu" class="main-menu" aria-label="Main menu">
         <a href="#main-menu-toggle"

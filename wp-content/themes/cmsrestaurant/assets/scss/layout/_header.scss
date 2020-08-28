@@ -4,14 +4,22 @@
 //
 // /* STYLES GO HERE */
 
-header {
+.header {
   padding: 20px;
   display: flex;
   align-items: baseline;
+  font-size: $menu-size;
+  font-weight: $menu-weight;
+
+  &__logo {
+
+
+  }
 }
 
-// Hamburger menu
 
+
+// Hamburger menu
 /* Screen reader only */
 .sr-only {
   position: absolute;
@@ -190,5 +198,11 @@ header {
     background: none; /* Remove background from off-canvas styling */
     color: #c00;
   }
+}
+
+// MEDIA QUERIES
+// DESKTOP
+@media screen and (min-width: 1030px) {
+
 }
 
